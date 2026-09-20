@@ -26,6 +26,7 @@
       <ul>
           <li><a href="#features"><span data-i18n="nav.features">Features</span></a></li>
           <li><a href="#benefits"><span data-i18n="nav.benefits">Benefits</span></a></li>
+          <li><a href="#pricing"><span data-i18n="nav.pricing">Pricing</span></a></li>
       </ul>
     </nav>
     <div class="header-actions">
@@ -105,13 +106,59 @@
       </div>
     </div>
   </section>
+  <section id="pricing" class="section container" aria-labelledby="pricing-title">
+    <div class="section-heading">
+      <h2 id="pricing-title"><span data-i18n="pricing.title">Pricing</span></h2>
+      <p><span data-i18n="pricing.subtitle">Choose the plan that best suits your needs</span></p>
+      <p class="pricing-note"><span data-i18n="pricing.note">Demonstration proposal. Prices and limits are illustrative; no subscriptions or payments are processed.</span></p>
+    </div>
+    <div class="pricing-grid">
+      <article class="price-card">
+        <h3><span data-i18n="plan.basic">Basic</span></h3>
+        <ul>
+          <li><span data-i18n="plan.basic.0">Manage up to 5 agricultural plots</span></li>
+          <li><span data-i18n="plan.basic.1">Manage up to 10 drones</span></li>
+          <li><span data-i18n="plan.basic.2">Basic image processing</span></li>
+          <li><span data-i18n="plan.basic.3">Basic plot map building</span></li>
+          <li><span data-i18n="plan.basic.4">Diagnosis generation</span></li>
+          <li><span data-i18n="plan.basic.5">Seasonal report generation</span></li>
+          <li><span data-i18n="plan.basic.6">Cloud saving</span></li>
+        </ul>
+        <p class="price"><strong>S/ 30</strong> <span data-i18n="perMonth">per month</span></p>
+        <button class="button button-green" type="button" data-open-dialog="platform-dialog"><span data-i18n="subscribe">Subscribe now</span></button>
+      </article>
+      <article class="price-card">
+        <h3><span data-i18n="plan.professional">Professional</span></h3>
+        <ul>
+          <li><span data-i18n="plan.professional.0">Everything included in Basic</span></li>
+          <li><span data-i18n="plan.professional.1">More agricultural plots and drones</span></li>
+          <li><span data-i18n="plan.professional.2">Advanced image processing</span></li>
+          <li><span data-i18n="plan.professional.3">Higher precision mapping</span></li>
+          <li><span data-i18n="plan.professional.4">Invite users to agricultural plots</span></li>
+        </ul>
+        <p class="price"><strong>S/ 50</strong> <span data-i18n="perMonth">per month</span></p>
+        <button class="button button-green" type="button" data-open-dialog="platform-dialog"><span data-i18n="subscribe">Subscribe now</span></button>
+      </article>
+      <article class="price-card">
+        <h3><span data-i18n="plan.corporate">Corporate</span></h3>
+        <ul>
+          <li><span data-i18n="plan.corporate.0">Everything included in Professional</span></li>
+          <li><span data-i18n="plan.corporate.1">Unlimited agricultural plots and drones</span></li>
+          <li><span data-i18n="plan.corporate.2">High processing queue priority</span></li>
+          <li><span data-i18n="plan.corporate.3">Custom user roles and permissions</span></li>
+        </ul>
+        <p class="price"><span data-i18n="customPlan">Let’s talk about your team</span></p>
+        <button class="button button-white" type="button" data-open-dialog="platform-dialog"><span data-i18n="learnMore">Learn more</span></button>
+      </article>
+    </div>
+  </section>
 </main>
 
 <dialog id="platform-dialog" class="dialog" aria-labelledby="platform-title" aria-describedby="platform-description">
   <h2 id="platform-title"><span data-i18n="dialog.title">SkyCrop is growing</span></h2>
   <p id="platform-description"><span data-i18n="dialog.description">The platform is still in development. This landing page demonstrates the proposal; registration, subscriptions and payments are not available yet.</span></p>
   <div class="dialog-actions">
-
+    
     <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
   </div>
 </dialog>
