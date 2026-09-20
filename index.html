@@ -27,6 +27,7 @@
           <li><a href="#features"><span data-i18n="nav.features">Features</span></a></li>
           <li><a href="#benefits"><span data-i18n="nav.benefits">Benefits</span></a></li>
           <li><a href="#pricing"><span data-i18n="nav.pricing">Pricing</span></a></li>
+          <li><a href="#contact"><span data-i18n="nav.contact">Contact us</span></a></li>
       </ul>
     </nav>
     <div class="header-actions">
@@ -152,15 +153,63 @@
       </article>
     </div>
   </section>
+  <section id="contact" class="section container" aria-labelledby="contact-title">
+    <div class="section-heading">
+      <h2 id="contact-title"><span data-i18n="contact.title">Contact us</span></h2>
+      <p><span data-i18n="contact.subtitle">Let us know your questions</span></p>
+    </div>
+    <form id="contact-form" class="contact-form" aria-describedby="contact-note">
+      <p id="contact-note" class="contact-note"><span data-i18n="form.note">Local demonstration: messages are not sent or stored. Please use sample data. All fields are required.</span></p>
+      <div class="field">
+        <label for="name"><span data-i18n="form.name">Your name</span></label>
+        <input id="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="name-error">
+        <span class="field-error" id="name-error"></span>
+      </div>
+      <div class="field">
+        <label for="email"><span data-i18n="form.email">Your email</span></label>
+        <input id="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-error">
+        <span class="field-error" id="email-error"></span>
+      </div>
+      <div class="field">
+        <label for="message"><span data-i18n="form.message">Your message</span></label>
+        <textarea id="message" rows="4" maxlength="1500" required aria-describedby="message-error"></textarea>
+        <span class="field-error" id="message-error"></span>
+      </div>
+      <div class="form-submit">
+        <button id="contact-submit" class="button button-white" type="button" disabled><span data-i18n="form.submit">Check message</span></button>
+      </div>
+      <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <noscript><p>This demo needs JavaScript to validate fields. / Esta demostración necesita JavaScript para validar los campos.</p></noscript>
+    </form>
+  </section>
 </main>
-
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 GreenTech</p>
+    <nav class="footer-links" aria-label="Footer navigation" data-i18n-aria="footer.label">
+      <a href="#privacy-dialog" data-open-dialog="privacy-dialog"><span data-i18n="footer.privacy">Privacy</span></a>
+      <a href="#terms-dialog" data-open-dialog="terms-dialog"><span data-i18n="footer.terms">Demonstration terms</span></a>
+      <a href="#contact"><span data-i18n="nav.contact">Contact us</span></a>
+    </nav>
+  </div>
+</footer>
 <dialog id="platform-dialog" class="dialog" aria-labelledby="platform-title" aria-describedby="platform-description">
   <h2 id="platform-title"><span data-i18n="dialog.title">SkyCrop is growing</span></h2>
   <p id="platform-description"><span data-i18n="dialog.description">The platform is still in development. This landing page demonstrates the proposal; registration, subscriptions and payments are not available yet.</span></p>
   <div class="dialog-actions">
-    
+    <a class="button button-green" href="#contact" data-close-dialog><span data-i18n="dialog.contact">Go to contact</span></a>
     <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
   </div>
+</dialog>
+<dialog id="privacy-dialog" class="dialog" aria-labelledby="privacy-title" aria-describedby="privacy-description">
+  <h2 id="privacy-title"><span data-i18n="privacy.title">Privacy in this demonstration</span></h2>
+  <p id="privacy-description"><span data-i18n="privacy.description">The contact form validates sample data in your browser. Its code does not send messages or save entered data in cookies or browser storage. The site loads Roboto from Google Fonts, and the hosting provider and Google receive the requests needed to load the page and font. No analytics or advertising scripts are included. Avoid entering personal or sensitive information.</span></p>
+  <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
+</dialog>
+<dialog id="terms-dialog" class="dialog" aria-labelledby="terms-title" aria-describedby="terms-description">
+  <h2 id="terms-title"><span data-i18n="terms.title">Terms of this demonstration</span></h2>
+  <p id="terms-description"><span data-i18n="terms.description">This academic demonstration presents the SkyCrop proposal. Plans, prices and functions are illustrative and do not form an active service offer. The page does not register accounts, control drones, diagnose crops or process payments. Commercial service terms will be defined before launch.</span></p>
+  <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
 </dialog>
 </body>
 </html>
