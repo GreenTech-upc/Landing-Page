@@ -1,0 +1,162 @@
+/* SkyCrop: shared design rules. Plain CSS, no framework. */
+:root {
+  --lime: #a4d65e;
+  --green-light: #66bb6a;
+  --green: #2e7d32;
+  --background: #f4f7f5;
+  --ink: #17221c;
+  --gray: #607d8b;
+  --blue: #1976a8;
+  --navy: #0b3954;
+  --white: #fff;
+  --error: #a32222;
+  --radius: 20px;
+  --shadow: 0 16px 40px rgb(23 34 28 / 8%);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { margin: 0; color: var(--ink); background: var(--background); font: 400 16px/1.6 Roboto, Arial, sans-serif; }
+button, input, textarea, select { font: inherit; }
+button, select { cursor: pointer; }
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: not-allowed; }
+a { color: var(--blue); text-underline-offset: 4px; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.15; }
+h1 { font-size: clamp(2.5rem, 4.2vw, 4rem); letter-spacing: -0.045em; }
+h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); letter-spacing: -0.025em; }
+h3 { font-size: 1.25rem; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 4px; }
+.site-header :focus-visible, .site-footer :focus-visible { outline-color: var(--lime); }
+.container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.section { padding-block: 54px; }
+.section-heading { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+.section-heading p { margin-top: 12px; }
+.eyebrow { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 18px; color: var(--green); }
+.skip-link { position: fixed; top: 8px; left: 16px; transform: translateY(-180%); z-index: 20; background: white; color: var(--ink); padding: 10px 16px; border-radius: 6px; }
+.skip-link:focus { transform: translateY(0); }
+.site-header { position: sticky; top: 0; z-index: 10; background: var(--green); color: white; border-radius: 0 0 24px 24px; }
+.header-inner { min-height: 80px; display: flex; align-items: center; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: white; text-decoration: none; font-size: 1.3rem; font-weight: 700; flex-shrink: 0; }
+.brand img { width: 48px; height: 48px; object-fit: contain; border-radius: 10px; padding: 4px; background: white; }
+.main-nav { margin-left: auto; }
+.main-nav ul { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.main-nav a { color: white; font-size: 0.9rem; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; min-height: 48px; }
+.main-nav a:hover { text-decoration: underline; }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: 48px; padding: 12px 24px; border: 2px solid transparent; border-radius: 12px; font-weight: 700; line-height: 1.25; text-align: center; text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease; }
+.button:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.button-primary { background: var(--blue); color: white; }
+.button-green { background: var(--green); color: white; }
+.button-white { background: white; color: var(--green); }
+.button-outline { border-color: var(--green); background: transparent; color: var(--green); }
+.button-small { padding: 8px 16px; font-size: 0.85rem; }
+.menu-toggle { display: none; color: white; border: 1px solid white; background: transparent; padding: 8px 14px; min-height: 48px; border-radius: 8px; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding-top: 28px; padding-bottom: 24px; }
+.hero-copy { padding-block: 40px; }
+.hero-copy p { font-size: 1.1rem; line-height: 1.65; max-width: 500px; margin-top: 28px; }
+.hero-copy .button { margin-top: 40px; min-width: 220px; }
+.hero-photo { width: 100%; height: 570px; object-fit: cover; object-position: center; border-radius: 28px 0 28px 28px; }
+.dialog { border: 0; border-radius: var(--radius); padding: 32px; width: min(520px, calc(100% - 32px)); max-height: calc(100dvh - 48px); color: var(--ink); box-shadow: var(--shadow); }
+.dialog::backdrop { background: rgb(11 57 84 / 65%); }
+.dialog h2 { font-size: 1.6rem; padding-right: 16px; }
+.dialog p { margin-block: 20px; }
+.dialog-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 1000px) {
+  .header-inner { flex-wrap: wrap; gap: 12px; padding-block: 12px; }
+  .header-actions { margin-left: auto; }
+  .main-nav { order: 3; width: 100%; margin: 0; }
+  .main-nav ul { justify-content: center; flex-wrap: wrap; gap: 12px 24px; }
+  .js .menu-toggle { display: block; }
+  .js .main-nav:not(.is-open) { display: none; }
+  .hero { gap: 32px; }
+  .hero-photo { height: 500px; }
+}
+@media (max-width: 640px) {
+  .container { width: calc(100% - 32px); }
+  .header-inner { gap: 10px; }
+  .brand { font-size: 1.1rem; gap: 8px; }
+  .brand img { width: 38px; height: 38px; }
+  .header-access { display: none; }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 20px; }
+  .hero-copy { padding-block: 16px 4px; }
+  .hero-copy p { font-size: 1rem; margin-top: 24px; }
+  .hero-copy .button { margin-top: 28px; width: 100%; }
+  .hero-photo { height: 340px; border-radius: 20px; }
+  .section { padding-block: 40px; }
+  .section-heading { margin-bottom: 28px; }
+  .dialog { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Features and benefits */
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.feature-card { display: flex; flex-direction: column; align-items: center; text-align: center; border-radius: var(--radius); padding: 30px 20px; background: var(--lime); }
+.feature-card:nth-child(even) { background: var(--blue); color: white; }
+.feature-card img { width: 116px; height: 116px; object-fit: contain; margin-bottom: 24px; }
+.feature-card:nth-child(even) img { filter: brightness(0) invert(1); }
+.feature-card h3 { min-height: 3em; display: flex; align-items: center; }
+.feature-card p { font-size: 0.9rem; margin-top: 16px; }
+.benefit-band { padding: 36px 0; background: var(--green-light); }
+.benefit-band + .benefit-band { margin-top: 20px; background: var(--blue); color: white; }
+.benefit-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.benefit-copy { text-align: center; max-width: 420px; margin: auto; }
+.benefit-copy h3 { font-size: 1.65rem; }
+.benefit-copy p { margin-top: 20px; font-size: 1.1rem; }
+.benefit-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.benefit-list li { background: white; border-radius: 12px; padding: 12px 20px; color: var(--green); text-align: center; line-height: 1.5; }
+.benefit-band + .benefit-band .benefit-list li { color: var(--navy); }
+@media (max-width: 1000px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } .benefit-inner { gap: 32px; } }
+@media (max-width: 640px) {
+  .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+  .feature-card { padding: 28px; }
+  .feature-card h3 { min-height: auto; }
+  .benefit-inner { grid-template-columns: 1fr; gap: 24px; }
+  .benefit-copy { order: -1; }
+}
+
+/* Pricing */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.price-card { background: var(--lime); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; }
+.price-card:nth-child(2) { background: var(--green-light); }
+.price-card:nth-child(3) { background: var(--green); color: white; }
+.price-card h3 { text-align: center; font-size: 1.65rem; }
+.price-card ul { padding-left: 20px; margin-block: 28px; font-size: 0.95rem; }
+.price-card li + li { margin-top: 8px; }
+.price { margin-top: auto; margin-bottom: 24px; text-align: center; }
+.price strong { font-size: 1.6rem; }
+.price-card .button { width: 100%; }
+.pricing-note { color: var(--navy); font-size: 0.9rem; margin-top: 16px; }
+.price-card:last-child :focus-visible { outline-color: white; }
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 580px; margin: auto; } }
+
+/* Contact and footer */
+.contact-form { background: var(--blue); color: white; max-width: 760px; margin: auto; padding: 36px 48px; border-radius: var(--radius); }
+.contact-note { margin-bottom: 24px; }
+.field { margin-bottom: 20px; }
+.field label { display: block; font-weight: 500; margin-bottom: 8px; }
+.field input, .field textarea { width: 100%; min-height: 48px; border: 2px solid white; border-radius: 10px; padding: 12px; background: white; color: var(--ink); }
+.field textarea { min-height: 130px; resize: vertical; }
+.field [aria-invalid="true"] { border-color: var(--error); box-shadow: 0 0 0 2px white; }
+.field-error { display: block; margin-top: 8px; font-weight: 500; }
+.field-error:empty { display: none; }
+.form-submit { display: flex; justify-content: center; }
+.form-submit .button { min-width: 200px; }
+.form-status:not(:empty) { background: white; color: var(--navy); padding: 16px; border-radius: 10px; margin-top: 20px; }
+.contact-form :focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+.contact-form .button:disabled { opacity: 0.65; }
+.site-footer { margin-top: 48px; padding: 32px 0; background: var(--ink); color: white; text-align: center; }
+.footer-links { display: flex; gap: 12px 24px; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 16px; }
+.footer-links a, .footer-links button { color: white; background: none; border: 0; padding: 10px 4px; min-height: 48px; text-decoration: underline; font-size: 0.9rem; }
+@media (max-width: 640px) { .contact-form { padding: 24px 20px; } .site-footer { margin-top: 24px; } }
+
+/* Language selector */
+.language-label { font-size: 0.8rem; }
+.language-control { display: flex; align-items: center; gap: 8px; }
+.language-control select { min-height: 48px; border: 1px solid white; border-radius: 8px; background: var(--green); color: white; padding: 8px; }
+@media (max-width: 640px) { .language-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); } }

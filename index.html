@@ -1,13 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>SkyCrop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover SkyCrop: plot management, drone planning and crop monitoring for farmers and agronomists.">
+  <meta name="author" content="GreenTech">
+  <meta name="theme-color" content="#2e7d32">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script src="assets/scripts/main.js" defer></script>
+  <title>SkyCrop | Smarter crop monitoring</title>
 </head>
-
 <body>
-    <p>SkyCrop works!</p>
+<a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="#home" aria-label="SkyCrop home" data-i18n-aria="brand.label">
+      <img src="assets/images/SkyCrop-Logo-NoBG-NoText.png" alt="" width="48" height="48">
+      <span>SkyCrop</span>
+    </a>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation" data-i18n-aria="nav.label">
+      <ul>
+        <li><a href="#features"><span data-i18n="nav.features">Features</span></a></li>
+        <li><a href="#benefits"><span data-i18n="nav.benefits">Benefits</span></a></li>
+        <li><a href="#pricing"><span data-i18n="nav.pricing">Pricing</span></a></li>
+        <li><a href="#contact"><span data-i18n="nav.contact">Contact us</span></a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="language-control">
+        <label class="language-label" for="language"><span data-i18n="language">Language</span></label>
+        <select id="language" name="language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <div class="header-access"><button class="button button-white button-small" type="button" data-open-dialog="platform-dialog"><span data-i18n="access">Access Platform</span></button></div>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false"><span data-i18n="menu">Menu</span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <section id="home" class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="eyebrow"><span data-i18n="hero.eyebrow">A clearer view of your crops</span></span>
+      <h1 id="hero-title"><span data-i18n="hero.title">Make monitoring your crops more manageable</span></h1>
+      <p><span data-i18n="hero.description">Centralize the management of your plots, automate their analysis, and detect anomalies before they affect your harvest. All on a single platform.</span></p>
+      <button class="button button-primary" type="button" data-open-dialog="platform-dialog"><span data-i18n="hero.cta">Sign up today</span></button>
+    </div>
+    <img class="hero-photo" src="assets/images/drone-agricultural.jpg" alt="Agricultural drone flying above a green crop field" data-i18n-alt="hero.alt" width="600" height="570" fetchpriority="high">
+  </section>
+  <section id="features" class="section container" aria-labelledby="features-title">
+    <div class="section-heading">
+      <h2 id="features-title"><span data-i18n="features.title">Features</span></h2>
+      <p><span data-i18n="features.subtitle">Discover our tools designed to help you</span></p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <img src="assets/images/field-svgrepo.svg" alt="" width="116" height="116" loading="lazy">
+        <h3><span data-i18n="feature.plot">Agricultural Plot Management</span></h3>
+        <p><span data-i18n="feature.plot.description">Manage your crops and follow the state of your plots with maps and notifications.</span></p>
+      </article>
+      <article class="feature-card">
+        <img src="assets/images/drone-svgrepo.svg" alt="" width="116" height="116" loading="lazy">
+        <h3><span data-i18n="feature.drone">Drone Route Planning</span></h3>
+        <p><span data-i18n="feature.drone.description">Plan flight routes to capture images and support crop monitoring.</span></p>
+      </article>
+      <article class="feature-card">
+        <img src="assets/images/plant-svgrepo.svg" alt="" width="116" height="116" loading="lazy">
+        <h3><span data-i18n="feature.crop">Crop Diagnosis</span></h3>
+        <p><span data-i18n="feature.crop.description">Review image analysis to identify crop conditions that need attention.</span></p>
+      </article>
+      <article class="feature-card">
+        <img src="assets/images/report-svgrepo.svg" alt="" width="116" height="116" loading="lazy">
+        <h3><span data-i18n="feature.report">Seasonal Report Generation</span></h3>
+        <p><span data-i18n="feature.report.description">Explore crop reports in an organized history and compare seasons.</span></p>
+      </article>
+    </div>
+  </section>
+  <section id="benefits" class="section" aria-labelledby="benefits-title">
+    <div class="section-heading container">
+      <h2 id="benefits-title"><span data-i18n="benefits.title">Benefits</span></h2>
+      <p><span data-i18n="benefits.subtitle">See how SkyCrop can help you</span></p>
+    </div>
+    <div class="benefit-band">
+      <div class="benefit-inner container">
+        <ul class="benefit-list">
+          <li><span data-i18n="benefit.farmer.0">Make crop care easier with information that supports field inspections.</span></li>
+          <li><span data-i18n="benefit.farmer.1">Identify possible pest, disease or irrigation issues for timely review.</span></li>
+          <li><span data-i18n="benefit.farmer.2">Compare seasons to review which practices worked best.</span></li>
+        </ul>
+        <div class="benefit-copy">
+          <h3><span data-i18n="farmers.title">For Farmers</span></h3>
+          <p><span data-i18n="farmers.description">Care for your crops with clearer information and earlier attention to risks.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="benefit-band">
+      <div class="benefit-inner container">
+        <div class="benefit-copy">
+          <h3><span data-i18n="agronomists.title">For Agronomists</span></h3>
+          <p><span data-i18n="agronomists.description">Support your technical evaluation and agronomic diagnosis.</span></p>
+        </div>
+        <ul class="benefit-list">
+          <li><span data-i18n="benefit.agro.0">Access diagnoses and crop maps to support your evaluations.</span></li>
+          <li><span data-i18n="benefit.agro.1">Follow crop development with organized information.</span></li>
+          <li><span data-i18n="benefit.agro.2">Present clear findings to landowners and clients.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" class="section container" aria-labelledby="pricing-title">
+    <div class="section-heading">
+      <h2 id="pricing-title"><span data-i18n="pricing.title">Pricing</span></h2>
+      <p><span data-i18n="pricing.subtitle">Choose the plan that best suits your needs</span></p>
+      <p class="pricing-note"><span data-i18n="pricing.note">Demonstration proposal. Prices and limits are illustrative; no subscriptions or payments are processed.</span></p>
+    </div>
+    <div class="pricing-grid">
+      <article class="price-card">
+        <h3><span data-i18n="plan.basic">Basic</span></h3>
+        <ul>
+          <li><span data-i18n="plan.basic.0">Manage up to 5 agricultural plots</span></li>
+          <li><span data-i18n="plan.basic.1">Manage up to 10 drones</span></li>
+          <li><span data-i18n="plan.basic.2">Basic image processing</span></li>
+          <li><span data-i18n="plan.basic.3">Basic plot map building</span></li>
+          <li><span data-i18n="plan.basic.4">Diagnosis generation</span></li>
+          <li><span data-i18n="plan.basic.5">Seasonal report generation</span></li>
+          <li><span data-i18n="plan.basic.6">Cloud saving</span></li>
+        </ul>
+        <p class="price"><strong>S/ 30</strong> <span data-i18n="perMonth">per month</span></p>
+        <button class="button button-green" type="button" data-open-dialog="platform-dialog"><span data-i18n="subscribe">Subscribe now</span></button>
+      </article>
+      <article class="price-card">
+        <h3><span data-i18n="plan.professional">Professional</span></h3>
+        <ul>
+          <li><span data-i18n="plan.professional.0">Everything included in Basic</span></li>
+          <li><span data-i18n="plan.professional.1">More agricultural plots and drones</span></li>
+          <li><span data-i18n="plan.professional.2">Advanced image processing</span></li>
+          <li><span data-i18n="plan.professional.3">Higher precision mapping</span></li>
+          <li><span data-i18n="plan.professional.4">Invite users to agricultural plots</span></li>
+        </ul>
+        <p class="price"><strong>S/ 50</strong> <span data-i18n="perMonth">per month</span></p>
+        <button class="button button-green" type="button" data-open-dialog="platform-dialog"><span data-i18n="subscribe">Subscribe now</span></button>
+      </article>
+      <article class="price-card">
+        <h3><span data-i18n="plan.corporate">Corporate</span></h3>
+        <ul>
+          <li><span data-i18n="plan.corporate.0">Everything included in Professional</span></li>
+          <li><span data-i18n="plan.corporate.1">Unlimited agricultural plots and drones</span></li>
+          <li><span data-i18n="plan.corporate.2">High processing queue priority</span></li>
+          <li><span data-i18n="plan.corporate.3">Custom user roles and permissions</span></li>
+        </ul>
+        <p class="price"><span data-i18n="customPlan">Let’s talk about your team</span></p>
+        <button class="button button-white" type="button" data-open-dialog="platform-dialog"><span data-i18n="learnMore">Learn more</span></button>
+      </article>
+    </div>
+  </section>
+  <section id="contact" class="section container" aria-labelledby="contact-title">
+    <div class="section-heading">
+      <h2 id="contact-title"><span data-i18n="contact.title">Contact us</span></h2>
+      <p><span data-i18n="contact.subtitle">Let us know your questions</span></p>
+    </div>
+    <form id="contact-form" class="contact-form" aria-describedby="contact-note">
+      <p id="contact-note" class="contact-note"><span data-i18n="form.note">Local demonstration: messages are not sent or stored. Please use sample data. All fields are required.</span></p>
+      <div class="field">
+        <label for="name"><span data-i18n="form.name">Your name</span></label>
+        <input id="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="name-error">
+        <span class="field-error" id="name-error"></span>
+      </div>
+      <div class="field">
+        <label for="email"><span data-i18n="form.email">Your email</span></label>
+        <input id="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-error">
+        <span class="field-error" id="email-error"></span>
+      </div>
+      <div class="field">
+        <label for="message"><span data-i18n="form.message">Your message</span></label>
+        <textarea id="message" rows="4" maxlength="1500" required aria-describedby="message-error"></textarea>
+        <span class="field-error" id="message-error"></span>
+      </div>
+      <div class="form-submit">
+        <button id="contact-submit" class="button button-white" type="button" disabled><span data-i18n="form.submit">Check message</span></button>
+      </div>
+      <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <noscript><p>This demo needs JavaScript to validate fields. / Esta demostración necesita JavaScript para validar los campos.</p></noscript>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 GreenTech</p>
+    <nav class="footer-links" aria-label="Footer navigation" data-i18n-aria="footer.label">
+      <a href="#privacy-dialog" data-open-dialog="privacy-dialog"><span data-i18n="footer.privacy">Privacy</span></a>
+      <a href="#terms-dialog" data-open-dialog="terms-dialog"><span data-i18n="footer.terms">Demonstration terms</span></a>
+      <a href="#contact"><span data-i18n="nav.contact">Contact us</span></a>
+    </nav>
+  </div>
+</footer>
+<dialog id="platform-dialog" class="dialog" aria-labelledby="platform-title" aria-describedby="platform-description">
+  <h2 id="platform-title"><span data-i18n="dialog.title">SkyCrop is growing</span></h2>
+  <p id="platform-description"><span data-i18n="dialog.description">The platform is still in development. This landing page demonstrates the proposal; registration, subscriptions and payments are not available yet.</span></p>
+  <div class="dialog-actions">
+    <a class="button button-green" href="#contact" data-close-dialog><span data-i18n="dialog.contact">Go to contact</span></a>
+    <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
+  </div>
+</dialog>
+<dialog id="privacy-dialog" class="dialog" aria-labelledby="privacy-title" aria-describedby="privacy-description">
+  <h2 id="privacy-title"><span data-i18n="privacy.title">Privacy in this demonstration</span></h2>
+  <p id="privacy-description"><span data-i18n="privacy.description">The contact form validates sample data in your browser. Its code does not send messages or save entered data in cookies or browser storage. The site loads Roboto from Google Fonts, and the hosting provider and Google receive the requests needed to load the page and font. No analytics or advertising scripts are included. Avoid entering personal or sensitive information.</span></p>
+  <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
+</dialog>
+<dialog id="terms-dialog" class="dialog" aria-labelledby="terms-title" aria-describedby="terms-description">
+  <h2 id="terms-title"><span data-i18n="terms.title">Terms of this demonstration</span></h2>
+  <p id="terms-description"><span data-i18n="terms.description">This academic demonstration presents the SkyCrop proposal. Plans, prices and functions are illustrative and do not form an active service offer. The page does not register accounts, control drones, diagnose crops or process payments. Commercial service terms will be defined before launch.</span></p>
+  <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
+</dialog>
 </body>
 </html>
