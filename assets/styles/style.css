@@ -119,3 +119,18 @@ h3 { font-size: 1.25rem; }
   .benefit-inner { grid-template-columns: 1fr; gap: 24px; }
   .benefit-copy { order: -1; }
 }
+
+/* Pricing */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.price-card { background: var(--lime); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; }
+.price-card:nth-child(2) { background: var(--green-light); }
+.price-card:nth-child(3) { background: var(--green); color: white; }
+.price-card h3 { text-align: center; font-size: 1.65rem; }
+.price-card ul { padding-left: 20px; margin-block: 28px; font-size: 0.95rem; }
+.price-card li + li { margin-top: 8px; }
+.price { margin-top: auto; margin-bottom: 24px; text-align: center; }
+.price strong { font-size: 1.6rem; }
+.price-card .button { width: 100%; }
+.pricing-note { color: var(--navy); font-size: 0.9rem; margin-top: 16px; }
+.price-card:last-child :focus-visible { outline-color: white; }
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 580px; margin: auto; } }
