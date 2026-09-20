@@ -1,13 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>SkyCrop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover SkyCrop: plot management, drone planning and crop monitoring for farmers and agronomists.">
+  <meta name="author" content="GreenTech">
+  <meta name="theme-color" content="#2e7d32">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script src="assets/scripts/main.js" defer></script>
+  <title>SkyCrop | Smarter crop monitoring</title>
 </head>
-
 <body>
-    <p>SkyCrop works!</p>
+<a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="#home" aria-label="SkyCrop home" data-i18n-aria="brand.label">
+      <img src="assets/images/SkyCrop-Logo-NoBG-NoText.png" alt="" width="48" height="48">
+      <span>SkyCrop</span>
+    </a>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation" data-i18n-aria="nav.label">
+      <ul>
+          <li><a href="#home"><span data-i18n="nav.home">Home</span></a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+
+      <div class="header-access"><button class="button button-white button-small" type="button" data-open-dialog="platform-dialog"><span data-i18n="access">Access Platform</span></button></div>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false"><span data-i18n="menu">Menu</span></button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <section id="home" class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="eyebrow"><span data-i18n="hero.eyebrow">A clearer view of your crops</span></span>
+      <h1 id="hero-title"><span data-i18n="hero.title">Make monitoring your crops more manageable</span></h1>
+      <p><span data-i18n="hero.description">Centralize the management of your plots, automate their analysis, and detect anomalies before they affect your harvest. All on a single platform.</span></p>
+      <button class="button button-primary" type="button" data-open-dialog="platform-dialog"><span data-i18n="hero.cta">Sign up today</span></button>
+    </div>
+    <img class="hero-photo" src="assets/images/drone-agricultural.jpg" alt="Agricultural drone flying above a green crop field" data-i18n-alt="hero.alt" width="600" height="570" fetchpriority="high">
+  </section>
+</main>
+
+<dialog id="platform-dialog" class="dialog" aria-labelledby="platform-title" aria-describedby="platform-description">
+  <h2 id="platform-title"><span data-i18n="dialog.title">SkyCrop is growing</span></h2>
+  <p id="platform-description"><span data-i18n="dialog.description">The platform is still in development. This landing page demonstrates the proposal; registration, subscriptions and payments are not available yet.</span></p>
+  <div class="dialog-actions">
+
+    <button class="button button-outline" type="button" data-close-dialog autofocus><span data-i18n="close">Close</span></button>
+  </div>
+</dialog>
 </body>
 </html>
